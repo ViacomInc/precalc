@@ -1,0 +1,9 @@
+*.log
+*.tgz
+.DS_Store
+yarn.lock
+package-lock.json
+node_modules
+coverage
+dist
+test/precalc-test.js

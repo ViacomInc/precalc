@@ -1,0 +1,32 @@
+{
+  "name": "precalc",
+  "version": "1.0.0",
+  "description": "Simplify CSS equations with mixed units and wrap them in calc.",
+  "author": {
+    "name": "Matthew Armstrong",
+    "email": "raingerber2@gmail.com"
+  },
+  "main": "dist/precalc.js",
+  "module": "dist/precalc.esm.js",
+  "browser": "dist/precalc.umd.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^21.2.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-multi-entry": "^2.0.1",
+    "standard": "latest"
+  },
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "standard 'src/**/*.js' && rollup -c --environment TEST_BUILD && jest; rm test/precalc-test.js",
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "mapCoverage": true
+  }
+}
