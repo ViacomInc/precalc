@@ -26,6 +26,9 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "css"
+  ],
   "jest": {
     "collectCoverage": true,
     "mapCoverage": true
