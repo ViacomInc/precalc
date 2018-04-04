@@ -1,6 +1,6 @@
 # Precalc
 
-[![Build Status](https://travis-ci.org/ViacomInc/precalc.svg?branch=master)](https://travis-ci.org/ViacomInc/precalc) ![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Build Status](https://travis-ci.org/ViacomInc/precalc.svg?branch=master)](https://travis-ci.org/ViacomInc/precalc) [![codecov](https://codecov.io/gh/ViacomInc/precalc/branch/master/graph/badge.svg)](https://codecov.io/gh/ViacomInc/precalc) ![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Simplify CSS equations with mixed units and wrap them in [calc](https://developer.mozilla.org/en-US/docs/Web/CSS/calc).
 
