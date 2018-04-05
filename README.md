@@ -5,6 +5,8 @@
 Simplify CSS equations with mixed units and wrap them in [calc](https://developer.mozilla.org/en-US/docs/Web/CSS/calc).
 
 ```javascript
+const { calc } = require('precalc')
+
 const num = 5
 
 calc(`${num}px * 5 + 20px`)
@@ -19,11 +21,11 @@ calc('(2vh * (9)) / 3 * 4 + -(4vh) - 10px')
 
 ## API
 
-### `calc([opts], input)`
+The primary function. It supports currying.
 
-* `opts` (object) - optional config
+### `calc([options], input)`
 
-  * calc also supports currying when *opts* are passed without *input*
+* `options` (object) - *optional*
 
   * **units** (array\<string> | boolean) - *default: false*
 
@@ -59,7 +61,7 @@ calc = calc({ throws: false })
 calc('5px + 10px') // evaluates with throws: false
 ```
 
-### `eq([opts], input)`
+### `eq([options], input)`
 
 just like `calc`, but without the word "calc" in the output
 
@@ -87,12 +89,12 @@ wrapInCalc('50% + 25px')
 // 'calc(50% + 25px)'
 ```
 
-in fact, `calc` is just shorthand for `eq` and `wrapInCalc` together:
+**NOTE:**
+
+`calc` is just shorthand for `eq` and `wrapInCalc` together:
 
 ```js
-function calc(...args) {
-  return wrapInCalc(eq.apply(null, args))
-}
+const calc = (...args) => wrapInCalc(eq(...args))
 ```
 
 ## Example
@@ -116,15 +118,15 @@ width = wrapInCalc(width)
 // output: 'calc(40vw + 20px)'
 ```
 
-To see examples of valid input, check **index.test.js**.
+To see examples of valid input, check [index.test.js](https://github.com/ViacomInc/precalc/blob/master/test/index.test.js)
 
 ## Input Errors
 
 * Non-matching parentheses
 
-* Letters or "%" character with no preceding number
+* Letters or % character with no preceding number
 
-* Unsupported unit types (unless `opts.units` is false)
+* Unsupported unit types (unless `options.units` is false)
 
 * Input with chars that are not \+ - * / % ( ) digits or letters
 
