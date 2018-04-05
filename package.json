@@ -31,7 +31,12 @@
     "dist"
   ],
   "keywords": [
-    "css"
+    "css",
+    "calc",
+    "calculation",
+    "preprocess",
+    "preprocessor"
+
   ],
   "jest": {
     "collectCoverage": true,
