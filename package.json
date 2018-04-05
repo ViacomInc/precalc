@@ -7,6 +7,10 @@
     "name": "Matthew Armstrong",
     "email": "raingerber2@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ViacomInc/precalc.git"
+  },
   "main": "dist/precalc.js",
   "module": "dist/precalc.esm.js",
   "browser": "dist/precalc.umd.js",
